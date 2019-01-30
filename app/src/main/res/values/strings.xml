@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Tannus Template</string>
+    <string name="welcome">Welcome to week %1$d, day %2$d</string>
+    <string name="movement">Today\'s movement is the %1$s</string>
+    <string name="ready">Ready to start?</string>
+    <string name="start">Start</string>
+    <string name="title_activity_primer">PrimerActivity</string>
+    <string name="primer">You\'re doing %1$d sets of %2$d reps of %3$s</string>
+    <string name="next">Next Stage</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="warmup_weight">Warming up to: %1$d lbs</string>
+    <string name="count">Count</string>
+    <string name="weight">Weight</string>
+</resources>
