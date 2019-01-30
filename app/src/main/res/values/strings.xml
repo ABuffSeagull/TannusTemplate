@@ -8,8 +8,6 @@
     <string name="primer">You\'re doing %1$d sets of %2$d reps of %3$s</string>
     <string name="next">Next Stage</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="warmup_weight">Warming up to: %1$d lbs</string>
     <string name="count">Count</string>
     <string name="weight">Weight</string>
