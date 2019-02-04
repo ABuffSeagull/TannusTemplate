@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import kotlinx.android.synthetic.main.home_fragment.*
 
 class HomeFragment : Fragment() {
@@ -22,10 +23,7 @@ class HomeFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         welcomeText.text = getString(R.string.welcome, 1, 1)
         movementText.text = getString(R.string.movement, "squats")
-        startButton.setOnClickListener {
-            fragmentManager!!.beginTransaction().replace(R.id.container, PrimerFragment())
-                .addToBackStack(null).commit()
-        }
+        startButton.setOnClickListener { it.findNavController().navigate(R.id.action_homeFragment_to_primerFragment) }
     }
 
 }

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.abuffseagull.tannustemplate.HomeFragment"
+        android:label="home_fragment"
+        tools:layout="@layout/home_fragment">
+        <action
+            android:id="@+id/action_homeFragment_to_primerFragment"
+            app:destination="@id/primerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/primerFragment"
+        android:name="com.example.abuffseagull.tannustemplate.PrimerFragment"
+        android:label="fragment_primer"
+        tools:layout="@layout/fragment_primer">
+        <action
+            android:id="@+id/action_primerFragment_to_warmupFragment"
+            app:destination="@id/warmupFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/warmupFragment"
+        android:name="com.example.abuffseagull.tannustemplate.WarmupFragment"
+        android:label="fragment_warmup"
+        tools:layout="@layout/fragment_warmup">
+        <action
+            android:id="@+id/action_warmupFragment_to_setFragment"
+            app:destination="@id/setFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/setFragment"
+        android:name="com.example.abuffseagull.tannustemplate.SetFragment"
+        android:label="SetFragment" />
+</navigation>

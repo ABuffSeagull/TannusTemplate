@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.navigation.findNavController
 import kotlinx.android.synthetic.main.fragment_warmup.*
 
 class WarmupFragment : Fragment() {
@@ -72,5 +73,9 @@ class WarmupFragment : Fragment() {
             leftoverWeight -= count * weight
         }
         constraintSet.applyTo(warmupLayout)
+
+        nextStage.setOnClickListener {
+            it.findNavController().navigate(R.id.action_warmupFragment_to_setFragment)
+        }
     }
 }
