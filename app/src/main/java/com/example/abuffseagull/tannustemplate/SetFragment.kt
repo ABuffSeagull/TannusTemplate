@@ -17,6 +17,7 @@ import kotlinx.android.synthetic.main.fragment_set.*
  */
 class SetFragment : Fragment() {
     var currentSet = 1
+    var maxSets = 5
 
 //    override fun onCreate(savedInstanceState: Bundle?) {
 //        super.onCreate(savedInstanceState)
@@ -39,7 +40,15 @@ class SetFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        nextSet.setOnClickListener { currentSet += 1 }
+        setCounter.text = getString(R.string.set_counter, currentSet, maxSets)
+        nextSet.setOnClickListener {
+            if (currentSet < maxSets) {
+                currentSet += 1
+                setCounter.text = getString(R.string.set_counter, currentSet, maxSets)
+            } else {
+                // TODO: move on to next thing
+            }
+        }
     }
 
     companion object {

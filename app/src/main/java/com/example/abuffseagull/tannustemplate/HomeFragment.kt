@@ -22,7 +22,7 @@ class HomeFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         welcomeText.text = getString(R.string.welcome, 1, 1)
-        movementText.text = getString(R.string.movement, "squats")
+        movementText.text = getString(R.string.today_movement, "squats")
         startButton.setOnClickListener { it.findNavController().navigate(R.id.action_homeFragment_to_primerFragment) }
     }
 

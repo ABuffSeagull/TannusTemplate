@@ -20,20 +20,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Welcome to week 1, day 1" />
 
     <TextView
         android:id="@+id/movementText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/movement"
+        android:text="@string/today_movement"
         android:textAlignment="center"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/textView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/welcomeText" />
+        app:layout_constraintTop_toBottomOf="@+id/welcomeText"
+        tools:text="Today's movement is the squat" />
 
     <TextView
         android:id="@+id/textView3"

@@ -1,14 +1,21 @@
 <resources>
     <string name="app_name">Tannus Template</string>
     <string name="welcome">Welcome to week %1$d, day %2$d</string>
-    <string name="movement">Today\'s movement is the %1$s</string>
+    <string name="today_movement">Today\'s movement is the %1$s</string>
     <string name="ready">Ready to start?</string>
     <string name="start">Start</string>
     <string name="title_activity_primer">PrimerActivity</string>
     <string name="primer">You\'re doing %1$d sets of %2$d reps of %3$s</string>
     <string name="next">Next Stage</string>
+    <string name="congrats">Congrats!</string>
+    <string name="next_movement">On to the next movement</string>
 
     <string name="warmup_weight">Warming up to: %1$d lbs</string>
     <string name="count">Count</string>
     <string name="weight">Weight</string>
+    <string name="set_counter">%1$d / %2$d</string>
+    <string name="movement">Movement:</string>
+    <string name="set_rep">You are doing:</string>
+    <string name="current_set">You are on set:</string>
+    <string name="next_set">Next Set</string>
 </resources>
