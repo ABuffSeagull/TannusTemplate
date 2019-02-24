@@ -3,6 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.example.abuffseagull.tannustemplate.SharedViewModel" />
+    </data>
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/frameLayout2"
@@ -79,6 +85,7 @@
             android:layout_marginEnd="8dp"
             android:textAlignment="textStart"
             android:textSize="24sp"
+            android:text="@{viewmodel.currentSet + ` / ` + viewmodel.maxSet}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_chainStyle="packed"
             app:layout_constraintStart_toStartOf="parent"

@@ -1,11 +1,13 @@
 package com.example.abuffseagull.tannustemplate
 
 
+import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.abuffseagull.tannustemplate.databinding.FragmentSetBinding
 import kotlinx.android.synthetic.main.fragment_set.*
 
 
@@ -16,8 +18,7 @@ import kotlinx.android.synthetic.main.fragment_set.*
  *
  */
 class SetFragment : Fragment() {
-    var currentSet = 1
-    var maxSets = 5
+    lateinit var sharedViewModel: SharedViewModel
 
 //    override fun onCreate(savedInstanceState: Bundle?) {
 //        super.onCreate(savedInstanceState)
@@ -31,25 +32,20 @@ class SetFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-//        val binding = DataBindingUtil.inflate<FragmentSetBinding>(inflater, R.layout.fragment_set, container, false)
-//        val binding = FragmentSetBinding.inflate(inflater, container, false)
-//        binding.currentSet = this
-//        return binding.root
-        return inflater.inflate(R.layout.fragment_set, container, false)
+        val binding = FragmentSetBinding.inflate(inflater, container, false)
+        sharedViewModel = activity!!.let { ViewModelProviders.of(it).get(SharedViewModel::class.java) }
+        binding.viewmodel = sharedViewModel
+        binding.lifecycleOwner = this
+        return binding.root
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        setCounter.text = getString(R.string.set_counter, currentSet, maxSets)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         nextSet.setOnClickListener {
-            if (currentSet < maxSets) {
-                currentSet += 1
-                setCounter.text = getString(R.string.set_counter, currentSet, maxSets)
-            } else {
-                // TODO: move on to next thing
-            }
+            sharedViewModel.currentSet.value = sharedViewModel.currentSet.value!!.plus(1)
         }
     }
+
 
     companion object {
         /**
