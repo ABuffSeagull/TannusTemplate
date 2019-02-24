@@ -1,4 +1,4 @@
-package com.example.abuffseagull.tannustemplate
+package com.abuffseagull.tannustemplate
 
 import android.os.Bundle
 import android.support.v4.app.Fragment

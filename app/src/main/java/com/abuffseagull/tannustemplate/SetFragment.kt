@@ -1,4 +1,4 @@
-package com.example.abuffseagull.tannustemplate
+package com.abuffseagull.tannustemplate
 
 
 import android.arch.lifecycle.ViewModelProviders
@@ -7,7 +7,7 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.abuffseagull.tannustemplate.databinding.FragmentSetBinding
+import com.abuffseagull.tannustemplate.databinding.FragmentSetBinding
 import kotlinx.android.synthetic.main.fragment_set.*
 
 

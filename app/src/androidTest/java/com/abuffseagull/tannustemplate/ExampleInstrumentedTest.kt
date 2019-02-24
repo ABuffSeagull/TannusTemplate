@@ -1,12 +1,10 @@
-package com.example.abuffseagull.tannustemplate
+package com.abuffseagull.tannustemplate
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4
-
+import org.junit.Assert.assertEquals
 import org.junit.Test
 import org.junit.runner.RunWith
-
-import org.junit.Assert.*
 
 /**
  * Instrumented test, which will execute on an Android device.
@@ -19,6 +17,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getTargetContext()
-        assertEquals("com.example.abuffseagull.tannustemplate", appContext.packageName)
+        assertEquals("com.abuffseagull.tannustemplate", appContext.packageName)
     }
 }
